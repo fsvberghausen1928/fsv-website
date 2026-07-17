@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "competition": "Kreisliga",
+    "homeTeam": "FSV Berghausen",
+    "awayTeam": "FC Example",
+    "date": "2026-08-01",
+    "time": "15:00",
+    "location": "Berghausen Stadium",
+    "result": "2-1"
+  }
+]

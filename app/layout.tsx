@@ -2,10 +2,12 @@
 
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+
 import "./globals.css";
 
-import Navigation from "@/components/Navigation/Navigation";
-import Footer from "@/components/Footer/Footer";
+import Navigation from "@/components/layout/Navigation";
+import Footer from "@/components/layout/Footer";
+import ScrollToTop from "@/components/layout/ScrollToTop";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -22,17 +24,19 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Offizielle Website des FSV Berghausen 1928. Aktuelle News, Spielpläne, Mannschaften, Galerie, Vereinsgeschichte und mehr.",
+    "Offizielle Website des FSV Berghausen 1928. News, Spielpläne, Mannschaften, Vereinsgeschichte, Galerie und mehr.",
+
+  applicationName: "FSV Berghausen 1928",
 
   keywords: [
     "FSV Berghausen",
-    "Fußball",
     "Berghausen",
+    "Fußball",
     "Fußballverein",
     "Kreisliga",
-    "Jugend",
     "Spielplan",
-    "Verein",
+    "Jugendfußball",
+    "Karlsruhe",
   ],
 
   authors: [
@@ -53,12 +57,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "de_DE",
+
     url: "https://www.fsvberghausen1928.de",
-    title: "FSV Berghausen 1928",
-    description:
-      "Tradition. Leidenschaft. Gemeinschaft. Offizielle Website des FSV Berghausen 1928.",
 
     siteName: "FSV Berghausen 1928",
+
+    title: "FSV Berghausen 1928",
+
+    description:
+      "Tradition. Leidenschaft. Gemeinschaft.",
 
     images: [
       {
@@ -72,9 +79,12 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
+
     title: "FSV Berghausen 1928",
+
     description:
-      "Offizielle Website des FSV Berghausen 1928.",
+      "Tradition. Leidenschaft. Gemeinschaft.",
+
     images: ["/images/og-image.jpg"],
   },
 
@@ -86,28 +96,28 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#005BAC",
   width: "device-width",
   initialScale: 1,
+  themeColor: "#005BAC",
+};
+
+type RootLayoutProps = {
+  children: React.ReactNode;
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: RootLayoutProps) {
   return (
-    <html lang="de">
+    <html lang="de" suppressHydrationWarning>
       <body className={inter.className}>
-        <div className="flex min-h-screen flex-col">
-          <Navigation />
+        <Navigation />
 
-          <main className="flex-1">
-            {children}
-          </main>
+        <main>{children}</main>
 
-          <Footer />
-        </div>
+        <Footer />
+
+        <ScrollToTop />
       </body>
     </html>
   );

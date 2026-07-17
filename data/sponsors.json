@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "name": "Example Sponsor",
+    "description": "Supporting FSV Berghausen 1928.",
+    "logo": "/images/sponsors/example.png",
+    "website": "https://example.com"
+  }
+]

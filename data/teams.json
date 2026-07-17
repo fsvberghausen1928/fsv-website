@@ -1,0 +1,18 @@
+[
+  {
+    "slug": "first-team",
+    "name": "First Team",
+    "description": "Our senior men's team.",
+    "image": "/images/teams/first-team.jpg",
+    "coach": "Coach Name",
+    "players": [
+      {
+        "id": 1,
+        "name": "Player Name",
+        "position": "Forward",
+        "number": 9,
+        "image": "/images/players/player.jpg"
+      }
+    ]
+  }
+]
