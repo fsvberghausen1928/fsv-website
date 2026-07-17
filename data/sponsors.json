@@ -1,9 +1,44 @@
 [
   {
     "id": 1,
-    "name": "Example Sponsor",
-    "description": "Supporting FSV Berghausen 1928.",
-    "logo": "/images/sponsors/example.png",
-    "website": "https://example.com"
+    "name": "Main Sponsor",
+    "logo": "/images/sponsors/main-sponsor.png",
+    "website": "https://example.com",
+    "tier": "main"
+  },
+  {
+    "id": 2,
+    "name": "Premium Partner",
+    "logo": "/images/sponsors/premium-partner.png",
+    "website": "https://example.com",
+    "tier": "premium"
+  },
+  {
+    "id": 3,
+    "name": "Sport Partner",
+    "logo": "/images/sponsors/sport-partner.png",
+    "website": "https://example.com",
+    "tier": "partner"
+  },
+  {
+    "id": 4,
+    "name": "Local Partner One",
+    "logo": "/images/sponsors/local-partner-one.png",
+    "website": "https://example.com",
+    "tier": "partner"
+  },
+  {
+    "id": 5,
+    "name": "Local Partner Two",
+    "logo": "/images/sponsors/local-partner-two.png",
+    "website": "https://example.com",
+    "tier": "partner"
+  },
+  {
+    "id": 6,
+    "name": "Community Partner",
+    "logo": "/images/sponsors/community-partner.png",
+    "website": "https://example.com",
+    "tier": "partner"
   }
 ]

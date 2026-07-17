@@ -1,12 +1,32 @@
 [
   {
     "id": 1,
+    "slug": "fsv-berghausen-vs-team-a",
     "competition": "Kreisliga",
-    "homeTeam": "FSV Berghausen",
-    "awayTeam": "FC Example",
-    "date": "2026-08-01",
+    "date": "2026-08-15",
     "time": "15:00",
-    "location": "Berghausen Stadium",
-    "result": "2-1"
+    "homeTeam": "FSV Berghausen 1928",
+    "awayTeam": "Team A",
+    "homeLogo": "/logos/logo.svg",
+    "awayLogo": "/images/teams/team-a.png",
+    "location": "Home Stadium",
+    "venue": "FSV Berghausen Sportplatz",
+    "status": "upcoming"
+  },
+  {
+    "id": 2,
+    "slug": "team-b-vs-fsv-berghausen",
+    "competition": "Kreisliga",
+    "date": "2026-07-30",
+    "time": "15:00",
+    "homeTeam": "Team B",
+    "awayTeam": "FSV Berghausen 1928",
+    "homeLogo": "/images/teams/team-b.png",
+    "awayLogo": "/logos/logo.svg",
+    "homeScore": 1,
+    "awayScore": 3,
+    "location": "Away Stadium",
+    "venue": "Opponent Stadium",
+    "status": "finished"
   }
 ]

@@ -1,0 +1,33 @@
+{
+  "club": {
+    "name": "FSV Berghausen 1928",
+    "shortName": "FSV Berghausen",
+    "founded": "1928",
+    "slogan": "Tradition. Leidenschaft. Gemeinschaft.",
+    "logo": "/logos/logo.svg"
+  },
+
+  "contact": {
+    "email": "info@fsvberghausen1928.de",
+    "phone": "+49 000 000000",
+    "address": "Germany"
+  },
+
+  "social": {
+    "facebook": "",
+    "instagram": "",
+    "youtube": ""
+  },
+
+  "website": {
+    "url": "https://www.fsvberghausen1928.de",
+    "language": "de",
+    "timezone": "Europe/Berlin"
+  },
+
+  "navigation": {
+    "showShop": true,
+    "showMembership": true,
+    "showSponsors": true
+  }
+}

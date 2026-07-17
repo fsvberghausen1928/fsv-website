@@ -1,10 +1,29 @@
 [
   {
-    "slug": "season-start-2026",
-    "title": "Season Start 2026",
-    "date": "2026-08-01",
-    "excerpt": "The new football season begins.",
-    "content": "FSV Berghausen 1928 starts the new season with exciting goals and ambitions.",
-    "image": "/images/news/season-start.jpg"
+    "id": 1,
+    "slug": "new-season-starts",
+    "title": "New Season Starts",
+    "date": "2026-07-01",
+    "image": "/images/news/new-season.jpg",
+    "excerpt": "FSV Berghausen 1928 prepares for another exciting football season.",
+    "content": "The new season begins with renewed ambitions, hard work, and commitment from all teams."
+  },
+  {
+    "id": 2,
+    "slug": "club-welcomes-new-players",
+    "title": "Club Welcomes New Players",
+    "date": "2026-06-15",
+    "image": "/images/news/new-players.jpg",
+    "excerpt": "Several new players have joined FSV Berghausen 1928.",
+    "content": "The club welcomes new talents who will strengthen our squads and continue our tradition."
+  },
+  {
+    "id": 3,
+    "slug": "youth-development-program",
+    "title": "Youth Development Program",
+    "date": "2026-05-20",
+    "image": "/images/news/youth-program.jpg",
+    "excerpt": "Our youth teams continue to grow with dedicated training programs.",
+    "content": "Developing young footballers remains one of the main priorities of FSV Berghausen 1928."
   }
 ]

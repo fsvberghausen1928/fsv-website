@@ -1,0 +1,42 @@
+[
+  {
+    "label": "Home",
+    "href": "/"
+  },
+  {
+    "label": "News",
+    "href": "/news"
+  },
+  {
+    "label": "Teams",
+    "href": "/teams"
+  },
+  {
+    "label": "Fixtures",
+    "href": "/fixtures"
+  },
+  {
+    "label": "Gallery",
+    "href": "/gallery"
+  },
+  {
+    "label": "History",
+    "href": "/history"
+  },
+  {
+    "label": "Membership",
+    "href": "/membership"
+  },
+  {
+    "label": "Sponsors",
+    "href": "/sponsors"
+  },
+  {
+    "label": "Shop",
+    "href": "/shop"
+  },
+  {
+    "label": "Contact",
+    "href": "/contact"
+  }
+]

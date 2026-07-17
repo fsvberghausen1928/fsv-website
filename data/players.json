@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "name": "Max Mustermann",
+    "number": 1,
+    "position": "Goalkeeper",
+    "nationality": "Germany",
+    "age": 24,
+    "image": "/images/players/player-1.jpg",
+    "bio": "Reliable goalkeeper with strong reflexes and leadership qualities.",
+    "team": "first-team"
+  },
+  {
+    "id": 2,
+    "name": "Thomas Becker",
+    "number": 5,
+    "position": "Defender",
+    "nationality": "Germany",
+    "age": 27,
+    "image": "/images/players/player-2.jpg",
+    "bio": "Experienced defender focused on organisation and defensive stability.",
+    "team": "first-team"
+  },
+  {
+    "id": 3,
+    "name": "Daniel Fischer",
+    "number": 10,
+    "position": "Midfielder",
+    "nationality": "Germany",
+    "age": 23,
+    "image": "/images/players/player-3.jpg",
+    "bio": "Creative midfielder with strong passing ability and game vision.",
+    "team": "first-team"
+  },
+  {
+    "id": 4,
+    "name": "Michael Weber",
+    "number": 1,
+    "position": "Goalkeeper",
+    "nationality": "Germany",
+    "age": 21,
+    "image": "/images/players/player-4.jpg",
+    "bio": "Young goalkeeper developing through competitive matches.",
+    "team": "second-team"
+  },
+  {
+    "id": 5,
+    "name": "Lukas Schneider",
+    "number": 8,
+    "position": "Midfielder",
+    "nationality": "Germany",
+    "age": 20,
+    "image": "/images/players/player-5.jpg",
+    "bio": "Hard-working midfielder with excellent stamina.",
+    "team": "second-team"
+  },
+  {
+    "id": 6,
+    "name": "Jonas Keller",
+    "number": 9,
+    "position": "Forward",
+    "nationality": "Germany",
+    "age": 19,
+    "image": "/images/players/player-6.jpg",
+    "bio": "Attacking player with pace and finishing ability.",
+    "team": "second-team"
+  },
+  {
+    "id": 7,
+    "name": "Youth Player One",
+    "number": 7,
+    "position": "Forward",
+    "nationality": "Germany",
+    "age": 16,
+    "image": "/images/players/player-7.jpg",
+    "bio": "Young attacking talent developing within the youth program.",
+    "team": "youth"
+  },
+  {
+    "id": 8,
+    "name": "Youth Player Two",
+    "number": 4,
+    "position": "Defender",
+    "nationality": "Germany",
+    "age": 15,
+    "image": "/images/players/player-8.jpg",
+    "bio": "Promising defender with strong teamwork skills.",
+    "team": "youth"
+  },
+  {
+    "id": 9,
+    "name": "Youth Player Three",
+    "number": 11,
+    "position": "Midfielder",
+    "nationality": "Germany",
+    "age": 16,
+    "image": "/images/players/player-9.jpg",
+    "bio": "Creative young midfielder with great potential.",
+    "team": "youth"
+  }
+]

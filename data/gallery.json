@@ -1,12 +1,50 @@
 [
   {
-    "slug": "season-2026",
-    "title": "Season 2026",
-    "description": "Photos from the 2026 football season.",
-    "cover": "/images/gallery/season-2026/cover.jpg",
+    "id": 1,
+    "slug": "club-history",
+    "title": "Club History",
+    "cover": "/images/gallery/history.jpg",
     "images": [
-      "/images/gallery/season-2026/photo-1.jpg",
-      "/images/gallery/season-2026/photo-2.jpg"
+      {
+        "src": "/images/gallery/history/image-1.jpg",
+        "alt": "FSV Berghausen historical moment"
+      },
+      {
+        "src": "/images/gallery/history/image-2.jpg",
+        "alt": "Club archive photo"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "matchday",
+    "title": "Matchday",
+    "cover": "/images/gallery/matchday.jpg",
+    "images": [
+      {
+        "src": "/images/gallery/matchday/image-1.jpg",
+        "alt": "Matchday action"
+      },
+      {
+        "src": "/images/gallery/matchday/image-2.jpg",
+        "alt": "Players during match"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "team-events",
+    "title": "Team Events",
+    "cover": "/images/gallery/events.jpg",
+    "images": [
+      {
+        "src": "/images/gallery/events/image-1.jpg",
+        "alt": "Team event"
+      },
+      {
+        "src": "/images/gallery/events/image-2.jpg",
+        "alt": "Club gathering"
+      }
     ]
   }
 ]

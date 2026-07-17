@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "Head Coach Name",
+    "role": "First Team Head Coach",
+    "image": "/images/staff/head-coach.jpg",
+    "description": "Responsible for first team training, tactics, and match preparation.",
+    "team": "first-team"
+  },
+  {
+    "id": 2,
+    "name": "Assistant Coach Name",
+    "role": "Assistant Coach",
+    "image": "/images/staff/assistant-coach.jpg",
+    "description": "Supports training sessions and tactical development.",
+    "team": "first-team"
+  },
+  {
+    "id": 3,
+    "name": "Second Team Coach",
+    "role": "Second Team Coach",
+    "image": "/images/staff/second-team-coach.jpg",
+    "description": "Guides the second team and supports player development.",
+    "team": "second-team"
+  },
+  {
+    "id": 4,
+    "name": "Youth Coordinator",
+    "role": "Youth Football Coordinator",
+    "image": "/images/staff/youth-coordinator.jpg",
+    "description": "Coordinates youth teams and develops young footballers.",
+    "team": "youth"
+  }
+]
