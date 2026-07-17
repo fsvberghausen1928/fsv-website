@@ -1,3 +1,10 @@
+export type MatchStatus =
+  | "upcoming"
+  | "finished"
+  | "cancelled";
+
+
+
 export interface Match {
 
   id: number;
@@ -11,9 +18,11 @@ export interface Match {
   time: string;
 
 
+
   homeTeam: string;
 
   awayTeam: string;
+
 
 
   homeLogo?: string;
@@ -21,23 +30,19 @@ export interface Match {
   awayLogo?: string;
 
 
+
   homeScore?: number;
 
   awayScore?: number;
 
 
+
   location?: string;
-
-
-  status?: 
-    | "upcoming"
-    | "live"
-    | "finished";
-
 
   venue?: string;
 
 
-  referee?: string;
+
+  status: MatchStatus;
 
 }

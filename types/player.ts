@@ -1,19 +1,59 @@
+export type PlayerPosition =
+  | "goalkeeper"
+  | "defender"
+  | "midfielder"
+  | "forward";
+
+
+
 export interface Player {
+
   id: number;
 
-  name: string;
 
-  position?: string;
+
+  firstName: string;
+
+  lastName: string;
+
+
+
+  fullName?: string;
+
+
 
   number?: number;
 
-  age?: number;
 
-  nationality?: string;
+
+  position: PlayerPosition;
+
+
+
+  team: string;
+
+
 
   image?: string;
 
-  team?: string;
 
-  bio?: string;
+
+  nationality?: string;
+
+
+
+  birthDate?: string;
+
+
+
+  height?: number;
+
+
+
+  joined?: string;
+
+
+
+  biography?: string;
+
 }

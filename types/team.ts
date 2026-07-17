@@ -1,28 +1,64 @@
-import type { Player } from "./player";
+export type TeamCategory =
+  | "first-team"
+  | "second-team"
+  | "youth";
+
 
 
 export interface Team {
-  id?: number;
+
+  id: number;
 
   slug: string;
 
   name: string;
 
+  category: TeamCategory;
+
+
+
   description?: string;
 
-  image?: string;
+
 
   coach?: string;
 
-  assistantCoach?: string;
 
-  category?: string;
 
-  players?: Player[];
+  logo?: string;
 
-  staff?: string[];
+
+
+  image?: string;
+
+
+
+  players?: number[];
+
+
 
   league?: string;
 
-  founded?: string;
+
+
+  position?: number;
+
+
+
+  statistics?: {
+
+    played: number;
+
+    wins: number;
+
+    draws: number;
+
+    losses: number;
+
+    goalsFor: number;
+
+    goalsAgainst: number;
+
+  };
+
 }
