@@ -6,18 +6,16 @@ import gallery from "@/data/gallery.json";
 
 export default function GalleryPreview() {
 
-  const previewImages = gallery.slice(0, 6);
+  const previewAlbums = gallery.slice(0, 6);
 
 
   return (
     <section className="bg-white py-16">
 
-
       <div className="mx-auto max-w-7xl px-6">
 
 
         <div className="mb-12 text-center">
-
 
           <h2 className="text-3xl font-bold text-gray-900">
             Gallery
@@ -28,42 +26,45 @@ export default function GalleryPreview() {
             Explore moments, matches, and memories from FSV Berghausen 1928.
           </p>
 
-
         </div>
-
-
-
-
 
 
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
 
 
-          {previewImages.map((image, index) => (
+          {previewAlbums.map((album) => (
 
-            <div
-              key={index}
-              className="relative aspect-square overflow-hidden rounded-lg"
+            <Link
+              key={album.id}
+              href={`/gallery/${album.slug}`}
+              className="group relative aspect-square overflow-hidden rounded-lg"
             >
 
+
               <Image
-                src={image.image}
-                alt={image.title ?? "FSV Berghausen Gallery"}
+                src={album.cover}
+                alt={album.title}
                 fill
-                className="object-cover transition duration-300 hover:scale-105"
+                className="object-cover transition duration-300 group-hover:scale-105"
               />
 
-            </div>
+
+              <div className="absolute inset-0 flex items-end bg-black/40 p-4">
+
+                <h3 className="text-lg font-semibold text-white">
+                  {album.title}
+                </h3>
+
+              </div>
+
+
+            </Link>
 
           ))}
 
 
         </div>
-
-
-
-
 
 
 
