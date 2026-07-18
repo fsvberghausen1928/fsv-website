@@ -9,7 +9,7 @@ import Sponsors from "@/components/sections/Sponsors";
 import GalleryPreview from "@/components/sections/GalleryPreview";
 import ClubHistory from "@/components/sections/ClubHistory";
 import CTASection from "@/components/sections/CTASection";
-import Newsletter from "@/components/sections/Newsletter";
+import Newsletter from "@/components/sections/NewsLetter";
 
 export const metadata: Metadata = {
   title: "Home",

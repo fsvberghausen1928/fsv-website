@@ -6,6 +6,7 @@ export default function NotFound() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-white px-6">
       <div className="mx-auto max-w-2xl text-center">
+
         <span className="text-sm font-semibold uppercase tracking-[0.3em] text-blue-700">
           Error 404
         </span>
@@ -15,11 +16,12 @@ export default function NotFound() {
         </h1>
 
         <p className="mt-6 text-lg leading-8 text-gray-600">
-          Sorry, the page you are looking for doesn't exist or may have been
-          moved.
+          Sorry, the page you are looking for doesn&apos;t exist or may have
+          been moved.
         </p>
 
         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+
           <Link
             href="/"
             className="rounded-lg bg-blue-700 px-6 py-3 font-semibold text-white transition hover:bg-blue-800"
@@ -33,7 +35,9 @@ export default function NotFound() {
           >
             Contact Us
           </Link>
+
         </div>
+
       </div>
     </main>
   );
