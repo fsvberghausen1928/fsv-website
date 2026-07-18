@@ -9,18 +9,15 @@ interface AlbumPageProps {
   }>;
 }
 
-
 export async function generateMetadata(
   { params }: AlbumPageProps
 ): Promise<Metadata> {
 
   const { album } = await params;
 
-
   const currentAlbum = gallery.find(
     (item) => item.slug === album
   );
-
 
   if (!currentAlbum) {
     return {
@@ -28,13 +25,11 @@ export async function generateMetadata(
     };
   }
 
-
   return {
     title: `${currentAlbum.title} | FSV Berghausen 1928`,
-    description: `View photos from ${currentAlbum.title} | FSV Berghausen 1928`,
+    description: currentAlbum.description,
   };
 }
-
 
 export default async function AlbumPage(
   { params }: AlbumPageProps
@@ -42,22 +37,18 @@ export default async function AlbumPage(
 
   const { album } = await params;
 
-
   const currentAlbum = gallery.find(
     (item) => item.slug === album
   );
-
 
   if (!currentAlbum) {
     notFound();
   }
 
-
   return (
     <main className="min-h-screen bg-white py-16">
 
       <div className="mx-auto max-w-6xl px-6">
-
 
         <div className="mb-12 text-center">
 
@@ -65,13 +56,13 @@ export default async function AlbumPage(
             {currentAlbum.title}
           </h1>
 
-
-          <p className="mt-4 text-gray-600">
-            {currentAlbum.description}
-          </p>
+          {currentAlbum.description && (
+            <p className="mt-4 text-gray-600">
+              {currentAlbum.description}
+            </p>
+          )}
 
         </div>
-
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
@@ -83,10 +74,11 @@ export default async function AlbumPage(
             >
 
               <Image
-                src={image}
-                alt={`${currentAlbum.title} photo ${index + 1}`}
+                src={image.src}
+                alt={image.alt}
                 fill
                 className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
               />
 
             </div>
@@ -94,7 +86,6 @@ export default async function AlbumPage(
           ))}
 
         </div>
-
 
       </div>
 

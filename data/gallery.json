@@ -3,6 +3,7 @@
     "id": 1,
     "slug": "club-history",
     "title": "Club History",
+    "description": "A collection of historical moments, archive photos, and memories from FSV Berghausen 1928.",
     "cover": "/images/gallery/history.jpg",
     "images": [
       {
@@ -19,6 +20,7 @@
     "id": 2,
     "slug": "matchday",
     "title": "Matchday",
+    "description": "Matchday impressions featuring games, players, supporters, and moments from the pitch.",
     "cover": "/images/gallery/matchday.jpg",
     "images": [
       {
@@ -35,6 +37,7 @@
     "id": 3,
     "slug": "team-events",
     "title": "Team Events",
+    "description": "Photos from team activities, club events, celebrations, and community gatherings.",
     "cover": "/images/gallery/events.jpg",
     "images": [
       {

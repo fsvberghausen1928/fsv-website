@@ -1,7 +1,9 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import type { Metadata } from "next";
+
 import teams from "@/data/teams.json";
+import players from "@/data/players.json";
 
 
 interface TeamPageProps {
@@ -9,6 +11,7 @@ interface TeamPageProps {
     team: string;
   }>;
 }
+
 
 
 export async function generateMetadata(
@@ -39,6 +42,8 @@ export async function generateMetadata(
 
 
 
+
+
 export default async function TeamPage(
   { params }: TeamPageProps
 ) {
@@ -63,7 +68,9 @@ export default async function TeamPage(
       <div className="mx-auto max-w-6xl px-6">
 
 
+
         <div className="mb-12 text-center">
+
 
           {currentTeam.image && (
 
@@ -87,6 +94,7 @@ export default async function TeamPage(
           </h1>
 
 
+
           {currentTeam.description && (
 
             <p className="mx-auto mt-4 max-w-3xl text-gray-600">
@@ -95,7 +103,9 @@ export default async function TeamPage(
 
           )}
 
+
         </div>
+
 
 
 
@@ -114,9 +124,11 @@ export default async function TeamPage(
               {currentTeam.coach}
             </p>
 
+
           </section>
 
         )}
+
 
 
 
@@ -127,69 +139,97 @@ export default async function TeamPage(
 
           <section>
 
+
             <h2 className="mb-6 text-2xl font-bold text-gray-900">
               Squad
             </h2>
 
 
 
+
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
 
-              {currentTeam.players.map((player) => (
 
-                <div
-                  key={player.id}
-                  className="rounded-lg border p-6"
-                >
+              {currentTeam.players.map((playerId) => {
 
 
-                  {player.image && (
+                const player = players.find(
+                  (item) => item.id === playerId
+                );
 
-                    <div className="relative mb-4 h-48 overflow-hidden rounded-lg">
 
-                      <Image
-                        src={player.image}
-                        alt={player.name}
-                        fill
-                        className="object-cover"
-                      />
-
-                    </div>
-
-                  )}
+                if (!player) {
+                  return null;
+                }
 
 
 
-                  <h3 className="text-xl font-semibold text-gray-900">
-                    {player.name}
-                  </h3>
+                return (
+
+                  <div
+                    key={player.id}
+                    className="rounded-lg border p-6"
+                  >
 
 
 
-                  {player.position && (
+                    {player.image && (
 
-                    <p className="mt-2 text-gray-600">
-                      {player.position}
-                    </p>
+                      <div className="relative mb-4 h-48 overflow-hidden rounded-lg">
 
-                  )}
+                        <Image
+                          src={player.image}
+                          alt={player.name}
+                          fill
+                          className="object-cover"
+                        />
 
+                      </div>
 
-
-                  {player.number && (
-
-                    <p className="mt-1 text-sm text-gray-500">
-                      #{player.number}
-                    </p>
-
-                  )}
+                    )}
 
 
-                </div>
 
-              ))}
 
+
+
+                    <h3 className="text-xl font-semibold text-gray-900">
+                      {player.name}
+                    </h3>
+
+
+
+
+
+                    {player.position && (
+
+                      <p className="mt-2 text-gray-600">
+                        {player.position}
+                      </p>
+
+                    )}
+
+
+
+
+
+
+                    {player.number && (
+
+                      <p className="mt-1 text-sm text-gray-500">
+                        #{player.number}
+                      </p>
+
+                    )}
+
+
+
+                  </div>
+
+                );
+
+              })}
 
             </div>
 
@@ -197,6 +237,7 @@ export default async function TeamPage(
           </section>
 
         )}
+
 
 
       </div>

@@ -1,9 +1,9 @@
-// app/layout.tsx
-
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 
 import "./globals.css";
+import "../styles/variables.css";
+import "../styles/animations.css";
 
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
