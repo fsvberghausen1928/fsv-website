@@ -1,13 +1,19 @@
+// app/teams/first-team/page.tsx
+
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+
 import teams from "@/data/teams.json";
+import players from "@/data/players.json";
+
 
 export const metadata: Metadata = {
   title: "First Team | FSV Berghausen 1928",
   description:
     "Meet the first team of FSV Berghausen 1928, including squad information, coaching staff, and team details.",
 };
+
 
 
 export default function FirstTeamPage() {
@@ -32,6 +38,13 @@ export default function FirstTeamPage() {
       </main>
     );
   }
+
+
+
+  const squad = players.filter((player) =>
+    team.players?.includes(player.id)
+  );
+
 
 
   return (
@@ -102,81 +115,77 @@ export default function FirstTeamPage() {
 
 
 
+        <section>
 
-        {team.players && (
-
-          <section>
-
-            <h2 className="mb-6 text-2xl font-bold text-gray-900">
-              First Team Squad
-            </h2>
+          <h2 className="mb-6 text-2xl font-bold text-gray-900">
+            First Team Squad
+          </h2>
 
 
 
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
 
-              {team.players.map((player) => (
+            {squad.map((player) => (
 
-                <div
-                  key={player.id}
-                  className="rounded-lg border p-6"
-                >
-
-
-                  {player.image && (
-
-                    <div className="relative mb-4 h-56 overflow-hidden rounded-lg">
-
-                      <Image
-                        src={player.image}
-                        alt={player.name}
-                        fill
-                        className="object-cover"
-                      />
-
-                    </div>
-
-                  )}
+              <div
+                key={player.id}
+                className="rounded-lg border p-6"
+              >
 
 
+                {player.image && (
 
-                  <h3 className="text-xl font-semibold text-gray-900">
-                    {player.name}
-                  </h3>
+                  <div className="relative mb-4 h-56 overflow-hidden rounded-lg">
+
+                    <Image
+                      src={player.image}
+                      alt={player.name}
+                      fill
+                      className="object-cover"
+                    />
+
+                  </div>
+
+                )}
 
 
 
-                  {player.position && (
-
-                    <p className="mt-2 text-gray-600">
-                      {player.position}
-                    </p>
-
-                  )}
+                <h3 className="text-xl font-semibold text-gray-900">
+                  {player.name}
+                </h3>
 
 
 
-                  {player.number && (
+                {player.position && (
 
-                    <p className="mt-1 text-sm text-gray-500">
-                      Shirt Number: {player.number}
-                    </p>
+                  <p className="mt-2 text-gray-600">
+                    {player.position}
+                  </p>
 
-                  )}
-
-
-                </div>
-
-              ))}
+                )}
 
 
-            </div>
+
+                {player.number && (
+
+                  <p className="mt-1 text-sm text-gray-500">
+                    Shirt Number: {player.number}
+                  </p>
+
+                )}
 
 
-          </section>
+              </div>
 
-        )}
+            ))}
+
+
+          </div>
+
+
+        </section>
+
 
 
 

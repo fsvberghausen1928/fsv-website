@@ -4,41 +4,47 @@
     "name": "Main Sponsor",
     "logo": "/images/sponsors/main-sponsor.png",
     "website": "https://example.com",
-    "tier": "main"
+    "tier": "main",
+    "description": "Our main sponsor supporting FSV Berghausen 1928 and the continued development of the club."
   },
   {
     "id": 2,
     "name": "Premium Partner",
     "logo": "/images/sponsors/premium-partner.png",
     "website": "https://example.com",
-    "tier": "premium"
+    "tier": "premium",
+    "description": "A valued premium partner contributing to the success and growth of FSV Berghausen 1928."
   },
   {
     "id": 3,
     "name": "Sport Partner",
     "logo": "/images/sponsors/sport-partner.png",
     "website": "https://example.com",
-    "tier": "partner"
+    "tier": "partner",
+    "description": "Supporting football, teamwork, and sporting activities at FSV Berghausen 1928."
   },
   {
     "id": 4,
     "name": "Local Partner One",
     "logo": "/images/sponsors/local-partner-one.png",
     "website": "https://example.com",
-    "tier": "partner"
+    "tier": "partner",
+    "description": "A local partner helping strengthen the connection between the club and the community."
   },
   {
     "id": 5,
     "name": "Local Partner Two",
     "logo": "/images/sponsors/local-partner-two.png",
     "website": "https://example.com",
-    "tier": "partner"
+    "tier": "partner",
+    "description": "A valued partner supporting local football and the activities of FSV Berghausen 1928."
   },
   {
     "id": 6,
     "name": "Community Partner",
     "logo": "/images/sponsors/community-partner.png",
     "website": "https://example.com",
-    "tier": "partner"
+    "tier": "partner",
+    "description": "A community partner supporting togetherness, youth development, and club initiatives."
   }
 ]

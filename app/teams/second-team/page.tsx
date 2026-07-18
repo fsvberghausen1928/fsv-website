@@ -1,13 +1,19 @@
+// app/teams/second-team/page.tsx
+
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+
 import teams from "@/data/teams.json";
+import players from "@/data/players.json";
+
 
 export const metadata: Metadata = {
   title: "Second Team | FSV Berghausen 1928",
   description:
     "Meet the second team of FSV Berghausen 1928, including squad information, coaching staff, and team details.",
 };
+
 
 
 export default function SecondTeamPage() {
@@ -20,14 +26,25 @@ export default function SecondTeamPage() {
   if (!team) {
     return (
       <main className="min-h-screen bg-white py-16">
+
         <div className="mx-auto max-w-6xl px-6 text-center">
+
           <h1 className="text-3xl font-bold text-gray-900">
             Second Team Not Found
           </h1>
+
         </div>
+
       </main>
     );
   }
+
+
+
+  const squad = players.filter((player) =>
+    team.players?.includes(player.id)
+  );
+
 
 
   return (
@@ -40,6 +57,7 @@ export default function SecondTeamPage() {
 
 
           {team.image && (
+
             <div className="relative mx-auto mb-8 h-72 max-w-3xl overflow-hidden rounded-lg">
 
               <Image
@@ -50,6 +68,7 @@ export default function SecondTeamPage() {
               />
 
             </div>
+
           )}
 
 
@@ -61,9 +80,11 @@ export default function SecondTeamPage() {
 
 
           {team.description && (
+
             <p className="mx-auto mt-4 max-w-3xl text-gray-600">
               {team.description}
             </p>
+
           )}
 
         </div>
@@ -73,6 +94,7 @@ export default function SecondTeamPage() {
 
 
         {team.coach && (
+
           <section className="mb-10 rounded-lg border p-6">
 
             <h2 className="text-2xl font-bold text-gray-900">
@@ -85,72 +107,85 @@ export default function SecondTeamPage() {
             </p>
 
           </section>
+
         )}
 
 
 
 
 
+        <section>
 
-        {team.players && (
-          <section>
-
-            <h2 className="mb-6 text-2xl font-bold text-gray-900">
-              Second Team Squad
-            </h2>
+          <h2 className="mb-6 text-2xl font-bold text-gray-900">
+            Second Team Squad
+          </h2>
 
 
-            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
 
-              {team.players.map((player) => (
+            {squad.map((player) => (
 
-                <div
-                  key={player.id}
-                  className="rounded-lg border p-6"
-                >
-
-                  {player.image && (
-                    <div className="relative mb-4 h-56 overflow-hidden rounded-lg">
-
-                      <Image
-                        src={player.image}
-                        alt={player.name}
-                        fill
-                        className="object-cover"
-                      />
-
-                    </div>
-                  )}
+              <div
+                key={player.id}
+                className="rounded-lg border p-6"
+              >
 
 
-                  <h3 className="text-xl font-semibold text-gray-900">
-                    {player.name}
-                  </h3>
+                {player.image && (
+
+                  <div className="relative mb-4 h-56 overflow-hidden rounded-lg">
+
+                    <Image
+                      src={player.image}
+                      alt={player.name}
+                      fill
+                      className="object-cover"
+                    />
+
+                  </div>
+
+                )}
 
 
-                  {player.position && (
-                    <p className="mt-2 text-gray-600">
-                      {player.position}
-                    </p>
-                  )}
+
+                <h3 className="text-xl font-semibold text-gray-900">
+                  {player.name}
+                </h3>
 
 
-                  {player.number && (
-                    <p className="mt-1 text-sm text-gray-500">
-                      Shirt Number: {player.number}
-                    </p>
-                  )}
 
-                </div>
+                {player.position && (
 
-              ))}
+                  <p className="mt-2 text-gray-600">
+                    {player.position}
+                  </p>
+
+                )}
 
 
-            </div>
 
-          </section>
-        )}
+                {player.number && (
+
+                  <p className="mt-1 text-sm text-gray-500">
+                    Shirt Number: {player.number}
+                  </p>
+
+                )}
+
+
+              </div>
+
+            ))}
+
+
+          </div>
+
+
+        </section>
+
+
 
 
 
