@@ -31,7 +31,7 @@ export async function generateMetadata(
 
   return {
     title: `${currentAlbum.title} | FSV Berghausen 1928`,
-    description: currentAlbum.description,
+    description: `View photos from ${currentAlbum.title} | FSV Berghausen 1928`,
   };
 }
 
