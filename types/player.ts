@@ -1,8 +1,10 @@
+// types/player.ts
+
 export type PlayerPosition =
-  | "goalkeeper"
-  | "defender"
-  | "midfielder"
-  | "forward";
+  | "Goalkeeper"
+  | "Defender"
+  | "Midfielder"
+  | "Forward";
 
 
 
@@ -10,50 +12,23 @@ export interface Player {
 
   id: number;
 
-
-
-  firstName: string;
-
-  lastName: string;
-
-
-
-  fullName?: string;
-
-
+  name: string;
 
   number?: number;
 
-
-
   position: PlayerPosition;
-
-
-
-  team: string;
-
-
-
-  image?: string;
-
-
 
   nationality?: string;
 
+  age?: number;
 
+  image?: string;
 
-  birthDate?: string;
+  bio?: string;
 
-
-
-  height?: number;
-
-
-
-  joined?: string;
-
-
-
-  biography?: string;
+  team:
+    | "first-team"
+    | "second-team"
+    | "youth";
 
 }
